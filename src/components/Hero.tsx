@@ -1,6 +1,8 @@
 import { Button } from "@/components/ui/button";
-import { Play, Radio } from "lucide-react";
+import { Radio } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
+import AudioPlayer from "./AudioPlayer";
+import MessageForm from "./MessageForm";
 
 const Hero = () => {
   return (
@@ -29,6 +31,9 @@ const Hero = () => {
             <span className="text-sm font-medium">Broadcasting Live</span>
           </div>
 
+          {/* Audio Player */}
+          <AudioPlayer />
+
           {/* Main Heading */}
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight">
             <span className="bg-gradient-primary bg-clip-text text-transparent">
@@ -44,15 +49,9 @@ const Hero = () => {
             We're more than just a station — we're a signal in the noise.
           </p>
 
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-8">
-            <Button variant="hero" size="lg" className="group">
-              <Play className="w-5 h-5 group-hover:scale-110 transition-transform" />
-              Listen Now
-            </Button>
-            <Button variant="outline" size="lg" className="border-primary/50 hover:bg-primary/10">
-              Explore Programs
-            </Button>
+          {/* Message Form */}
+          <div className="max-w-xl mx-auto pt-8">
+            <MessageForm />
           </div>
         </div>
 
